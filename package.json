@@ -1,0 +1,19 @@
+{
+  "name": "ai-gateway",
+  "version": "1.0.0",
+  "description": "AI Gateway on Cloudflare Workers",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "node node_modules/typescript/bin/tsc --project tsconfig.build.json",
+    "dev": "npm run build && node server.mjs",
+    "typecheck": "node node_modules/typescript/bin/tsc --noEmit -p tsconfig.json",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230419.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^4.111.0"
+  }
+}
